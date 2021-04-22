@@ -5,7 +5,7 @@ services:
     image: eclipse-mosquitto:latest
     restart: always
     volumes:
-      - /config:/mosquitto/config:ro
+      - /config:/mosquitto/config
       - /data:/mosquitto/data
       - /log:/mosquitto/log
     ports:
