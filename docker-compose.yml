@@ -1,12 +1,14 @@
 version: "3"
 services:
   mosquitto:
+    container_name: mqtt
     hostname: mosquitto
     image: eclipse-mosquitto:latest
     restart: always
     volumes:
-      - /config:/mosquitto/config
+      - /config:/mosquitto/config:rw
       - /data:/mosquitto/data
       - /log:/mosquitto/log
     ports:
       - "1883:1883"
+      - "9001:9001"
