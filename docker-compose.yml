@@ -6,9 +6,9 @@ services:
     image: eclipse-mosquitto:latest
     restart: always
     volumes:
-      - /config:/mosquitto/config:rw
-      - /data:/mosquitto/data
-      - /log:/mosquitto/log
+      - ./config:/mosquitto/config:rw
+      - ./data:/mosquitto/data
+      - ./log:/mosquitto/log
     ports:
       - "1883:1883"
       - "9001:9001"
